@@ -13,10 +13,19 @@
 #ifndef PHONEBOOK_HPP
 #define PHONEBOOK_HPP
 
+# include "Contact.hpp"
+
 class PhoneBook
 {
+    private:
+    Contact contacts[8];
+    int index;
 
-public:
+    public:
+    PhoneBook(); // constructor
+    void addContact();
+    void showContact(int i);
+    void showContactList();
 };
 
 #endif

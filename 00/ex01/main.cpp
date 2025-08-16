@@ -15,4 +15,11 @@
 
 int main()
 {
+    Contact a;
+
+    a.setFirstName("Lulu");
+    a.setLastName("Lemon");
+    
+    std::cout << a.getFirstName() << std::endl;
+    std::cout << a.getLastName() << std::endl;
 }
