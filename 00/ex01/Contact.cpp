@@ -1,5 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Contact.cpp                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zamohame <zamohame@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/08/17 14:56:41 by zamohame          #+#    #+#             */
+/*   Updated: 2025/08/17 14:56:44 by zamohame         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-# include "Contact.hpp"
+#include "Contact.hpp"
 
 // Setters
 void Contact::setFirstName(const std::string &str) { firstName = str; }

@@ -6,7 +6,7 @@
 #    By: zamohame <zamohame@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/08/14 12:54:18 by zamohame          #+#    #+#              #
-#    Updated: 2025/08/14 12:54:21 by zamohame         ###   ########.fr        #
+#    Updated: 2025/08/17 15:37:49 by zamohame         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,6 +17,8 @@ CXXFLAGS    = -Wall -Wextra -Werror -std=c++98
 
 SRC         = Contact.cpp \
 			  PhoneBook.cpp \
+			  Add.cpp \
+			  Show.cpp \
 			  main.cpp \
 
 
