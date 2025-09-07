@@ -1,13 +1,11 @@
 
 
-NAME        = horde  
+NAME        = reference  
 
 CXX         = c++            
 CXXFLAGS    = -Wall -Wextra -Werror -std=c++98  
 
-SRC         = Zombie.cpp \
-			  zombieHorde.cpp \
-			  main.cpp \
+SRC         = main.cpp \
 
 
 OBJ         = $(SRC:.cpp=.o)
