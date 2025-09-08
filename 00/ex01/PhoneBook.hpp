@@ -18,18 +18,18 @@
 
 class PhoneBook
 {
-private:
-	Contact contacts[8];
-	int index;
+	private:
+		Contact contacts[8];
+		int index;
 
-public:
-	PhoneBook(); // constructor
-	void addContact();
-	void showContact(int i);
-	void showContactList();
-	void searchContact();
-	bool isEmpty(int i) const;
-	bool isEmptyList() const;
+	public:
+		PhoneBook(); // constructor
+		void addContact();
+		void showContact(int i);
+		void showContactList();
+		void searchContact();
+		bool isEmpty(int i) const;
+		bool isEmptyList() const;
 };
 
 #endif
