@@ -15,20 +15,18 @@
 #define HUMANB_HPP
 
 #include <iostream>
-#include <cctype>
-#include <string>
 #include "Weapon.hpp"
+
 
 class HumanB
 {
     private:
-        Weapon Weapon;
-        std::string name;
+        Weapon* weapon_;
+        const std::string name_;
     
     public:
-        void attack();
-
+        HumanB(const std::string& name);
+        void attack() const;
+        void setWeapon(Weapon* weapon);
 };
-
-
 #endif

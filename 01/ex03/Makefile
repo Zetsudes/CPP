@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: zamohame <zamohame@student.42.fr>          +#+  +:+       +#+         #
+#    By: marvin <marvin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/09/09 09:47:54 by zamohame          #+#    #+#              #
-#    Updated: 2025/09/09 09:47:57 by zamohame         ###   ########.fr        #
+#    Updated: 2025/09/12 22:26:27 by marvin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,10 +16,10 @@ NAME        = attack
 CXX         = c++            
 CXXFLAGS    = -Wall -Wextra -Werror -std=c++98  
 
-SRC         = main.cpp \
-			  Weapon.cpp \
-			  HumanA.cpp \
+SRC         = HumanA.cpp \
 			  HumanB.cpp \
+			  Weapon.cpp \
+			  main.cpp \
 
 
 OBJ         = $(SRC:.cpp=.o)
