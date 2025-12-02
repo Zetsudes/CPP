@@ -23,6 +23,7 @@ class Zombie
         std::string name;
 
     public:
+		Zombie();
         void announce(void);
         void setName(const std::string &str);
         ~Zombie();

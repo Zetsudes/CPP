@@ -12,7 +12,7 @@
 
 # include "Zombie.hpp"
 
-int main (void)
+int main(void)
 {
     int N = 10;
     Zombie* horde = zombieHorde(N, "Oggy");

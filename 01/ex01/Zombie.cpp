@@ -12,6 +12,8 @@
 
 # include "Zombie.hpp"
 
+Zombie::Zombie() : name("") {}
+
 void Zombie::setName(const std::string &str) { name = str; }
 
 void Zombie::announce(void)

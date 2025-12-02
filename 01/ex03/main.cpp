@@ -31,5 +31,9 @@ int main()
         club.setType("some other type of club");
         jim.attack();
     }
+	{
+        HumanB tim("Tim");
+        tim.attack();   // NULL weapon :0
+    }
     return 0; 
 }

@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   parsing.cpp                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zamohame <zamohame@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/11/18 11:32:28 by zamohame          #+#    #+#             */
+/*   Updated: 2025/11/18 11:33:24 by zamohame         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "replace.hpp"
 
@@ -20,12 +31,17 @@ bool    parseArgs(int argc, char **argv, std::string &filename, std::string &s1,
     return true;
 }
 
-bool    parseFile(const std::string &filename)
+bool parseFile(const std::string &filename)
 {
-    std::ifstream infile(filename.c_str()); // ifstream expects a null terminated string
+    std::ifstream infile(filename.c_str());
     if (!infile)
     {
         std::cerr << "Error: cannot open file" << std::endl;
+        return false;
+    }
+    if (infile.peek() == EOF)
+    {
+        std::cerr << "Error: file is empty" << std::endl;
         return false;
     }
     return true;
