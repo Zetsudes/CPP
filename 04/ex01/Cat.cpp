@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zamohame <zamohame@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/26 15:02:20 by zamohame          #+#    #+#             */
+/*   Updated: 2026/02/06 11:15:38 by zamohame         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Cat.hpp"
 
 Cat::Cat() : brain(new Brain())
@@ -34,12 +46,3 @@ void Cat::makeSound() const
     std::cout << "Meow!" << std::endl;
 }
 
-void Cat::setBrainIdea(int index, const std::string& idea)
-{
-    brain->setIdea(index, idea);
-}
-
-std::string Cat::getBrainIdea(int index) const
-{
-    return brain->getIdea(index);
-}

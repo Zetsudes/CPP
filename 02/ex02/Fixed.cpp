@@ -6,7 +6,7 @@
 /*   By: zamohame <zamohame@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/15 15:31:02 by zamohame          #+#    #+#             */
-/*   Updated: 2025/09/16 14:14:44 by zamohame         ###   ########.fr       */
+/*   Updated: 2026/01/26 14:40:45 by zamohame         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,16 @@ Fixed& Fixed::operator=(const Fixed& f) // copy assignment operator
 Fixed::~Fixed() // destructor
 {
 	std::cout << "Destructor called" << std::endl;
+}
+
+int Fixed::toInt(void) const
+{
+	return _number >> _fractionalBits;
+}
+
+float Fixed::toFloat(void) const
+{
+	return (float)_number / (1 << _fractionalBits);
 }
 
 // comparison operators
@@ -98,7 +108,7 @@ Fixed Fixed::operator-(const Fixed& rhs)
 Fixed Fixed::operator*(const Fixed& rhs)
 {
 	Fixed result;
-	result.setRawBits((this->_number + rhs.getRawBits()) >> _fractionalBits);
+	result.setRawBits((this->_number * rhs.getRawBits()) >> _fractionalBits);
 	return result;
 }
 
@@ -169,4 +179,10 @@ Fixed& Fixed::max(Fixed &a, Fixed &b)
 const Fixed& Fixed::max(const Fixed &a, const Fixed &b)
 {
 	return (a.getRawBits() > b.getRawBits()) ? a : b;
+}
+
+std::ostream& operator<<(std::ostream &out, const Fixed &fixed)
+{
+	out << fixed.toFloat();
+	return out;
 }

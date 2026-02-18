@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zamohame <zamohame@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/26 15:02:31 by zamohame          #+#    #+#             */
+/*   Updated: 2026/02/06 11:15:41 by zamohame         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Dog.hpp"
 
 Dog::Dog() : brain(new Brain())
@@ -34,12 +46,3 @@ void Dog::makeSound() const
     std::cout << "Woof woof!" << std::endl;
 }
 
-void Dog::setBrainIdea(int index, const std::string& idea)
-{
-    brain->setIdea(index, idea);
-}
-
-std::string Dog::getBrainIdea(int index) const
-{
-    return brain->getIdea(index);
-}

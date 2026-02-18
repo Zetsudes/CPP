@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zamohame <zamohame@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/26 15:01:07 by zamohame          #+#    #+#             */
+/*   Updated: 2026/02/05 16:17:22 by zamohame         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "Animal.hpp"
 
@@ -26,7 +37,7 @@ Animal::~Animal()
 
 void Animal::makeSound() const
 {
-    std::cout << "Animal makes a generic sound!" << std::endl;
+    std::cout << "Animal makes a stupid sound --'" << std::endl;
 }
 
 std::string Animal::getType() const

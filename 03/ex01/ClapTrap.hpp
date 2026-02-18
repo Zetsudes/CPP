@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zamohame <zamohame@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/26 14:59:17 by zamohame          #+#    #+#             */
+/*   Updated: 2026/01/26 15:45:00 by zamohame         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #ifndef CLAPTRAP_H
 #define CLAPTRAP_H
@@ -8,9 +19,9 @@ class ClapTrap
 {
     protected:
         std::string _name;
-        int _hitPoints = 10;
-        int _energyPoints = 10;
-        int _attackDamage = 0;
+        int _hitPoints;
+        int _energyPoints;
+        int _attackDamage;
     
     public:
         ClapTrap();

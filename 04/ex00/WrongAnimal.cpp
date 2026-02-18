@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   WrongAnimal.cpp                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zamohame <zamohame@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/26 15:01:46 by zamohame          #+#    #+#             */
+/*   Updated: 2026/02/05 15:04:39 by zamohame         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "WrongAnimal.hpp"
 
@@ -26,7 +37,7 @@ WrongAnimal::~WrongAnimal()
 
 void WrongAnimal::makeSound() const
 {
-    std::cout << "Some wrong animal sound..." << std::endl;
+    std::cout << "Some weird animal sound...(⚆_⚆)" << std::endl;
 }
 
 std::string WrongAnimal::getType() const

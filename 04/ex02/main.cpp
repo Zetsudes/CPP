@@ -1,11 +1,23 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zamohame <zamohame@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/26 15:03:23 by zamohame          #+#    #+#             */
+/*   Updated: 2026/02/06 11:25:15 by zamohame         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 #include "Dog.hpp"
 #include "Cat.hpp"
 #include <iostream>
 
 int main()
 {
+    // AAnimal a;
     const int size = 4;
     AAnimal* animals[size];
 

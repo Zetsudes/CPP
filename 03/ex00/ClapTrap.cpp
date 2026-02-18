@@ -1,4 +1,14 @@
-
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ClapTrap.cpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zamohame <zamohame@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/26 14:58:47 by zamohame          #+#    #+#             */
+/*   Updated: 2026/02/05 14:04:07 by zamohame         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
@@ -15,8 +25,11 @@ ClapTrap::ClapTrap(const std::string& name)
 }
 
 ClapTrap::ClapTrap(const ClapTrap& src)
+    : _name(src._name),
+      _hitPoints(src._hitPoints),
+      _energyPoints(src._energyPoints),
+      _attackDamage(src._attackDamage)
 {
-    *this = src;
     std::cout << "ClapTrap copy constructor called for " << _name << std::endl;
 }
 
@@ -63,7 +76,7 @@ void ClapTrap::takeDamage(unsigned int amount)
     if (_hitPoints < 0)
         _hitPoints = 0;
     std::cout << "ClapTrap " << _name << " takes " << amount
-              << " points of damage because it's too weak <(ꐦㅍ _ㅍ)>  Remaining HP: " << _hitPoints << std::endl;
+              << " points of damage because it's too weak <(ꐦㅍ _ㅍ)> \n Remaining HP: " << _hitPoints << std::endl;
 }
 
 void ClapTrap::beRepaired(unsigned int amount)
@@ -81,5 +94,5 @@ void ClapTrap::beRepaired(unsigned int amount)
     _energyPoints--;
     _hitPoints += amount;
     std::cout << "ClapTrap " << _name << " repairs itself, gaining " << amount
-              << " hit points 🔋⚡  Current HP: " << _hitPoints << std::endl;
+              << " hit points 🔋⚡  Current HP: " << _hitPoints <<  " Current Energy Points: " << _energyPoints << std::endl;
 }

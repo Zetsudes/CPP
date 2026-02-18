@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zamohame <zamohame@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/26 15:02:40 by zamohame          #+#    #+#             */
+/*   Updated: 2026/02/06 11:23:13 by zamohame         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "Animal.hpp"
 #include "Dog.hpp"
@@ -6,7 +17,7 @@
 
 int main()
 {
-    const int size = 4;
+    const int size = 20;
     Animal* animals[size];
 
     for (int i = 0; i < size / 2; i++)
@@ -14,20 +25,15 @@ int main()
     for (int i = size / 2; i < size; i++)
         animals[i] = new Cat();
 
-    dynamic_cast<Dog*>(animals[0])->setBrainIdea(0, "Touch grass");
-    dynamic_cast<Cat*>(animals[2])->setBrainIdea(0, "Drink oil");
+    std::cout << "\n<3<3<3 Sounds <3<3<3\n";
+    for (int i = 0; i < size; i++)
+        animals[i]->makeSound();
 
-    std::cout << "\n<3<3<3 Brain Ideas <3<3<3" << std::endl;
-    std::cout << "Dog idea: " << dynamic_cast<Dog*>(animals[0])->getBrainIdea(0) << std::endl;
-    std::cout << "Cat idea: " << dynamic_cast<Cat*>(animals[2])->getBrainIdea(0) << std::endl;
+    std::cout << "\n<3<3<3 Deep copy test <3<3<3\n";
+    Dog original;
+    Dog copy(original);
 
-
-    Dog dogCopy(*dynamic_cast<Dog*>(animals[0]));
-    dogCopy.setBrainIdea(0, "Eat food");
-    std::cout << "Original Dog idea: " << dynamic_cast<Dog*>(animals[0])->getBrainIdea(0) << std::endl;
-    std::cout << "Copied Dog idea: " << dogCopy.getBrainIdea(0) << std::endl;
-
-
+    std::cout << "\n<3<3<3 Cleanup <3<3<3\n";
     for (int i = 0; i < size; i++)
         delete animals[i];
 

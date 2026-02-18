@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ClapTrap.cpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zamohame <zamohame@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/26 14:59:14 by zamohame          #+#    #+#             */
+/*   Updated: 2026/02/05 14:12:16 by zamohame         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 
 #include "ClapTrap.hpp"
@@ -15,8 +26,11 @@ ClapTrap::ClapTrap(const std::string& name)
 }
 
 ClapTrap::ClapTrap(const ClapTrap& src)
+    : _name(src._name),
+      _hitPoints(src._hitPoints),
+      _energyPoints(src._energyPoints),
+      _attackDamage(src._attackDamage)
 {
-    *this = src;
     std::cout << "ClapTrap copy constructor called for " << _name << std::endl;
 }
 
