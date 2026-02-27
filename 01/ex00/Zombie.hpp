@@ -19,7 +19,7 @@
 
 class Zombie
 {
-    private:
+    private:z
         std::string name;
 
     public:
