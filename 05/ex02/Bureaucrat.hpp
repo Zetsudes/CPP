@@ -6,7 +6,7 @@
 /*   By: zamohame <zamohame@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/18 14:53:34 by zamohame          #+#    #+#             */
-/*   Updated: 2026/02/26 14:26:12 by zamohame         ###   ########.fr       */
+/*   Updated: 2026/03/24 18:39:04 by zamohame         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ class Bureaucrat
         void decrementGrade(int amount);
 
         void signForm(Form& f);
+        void executeForm(AForm const & form) const;
         
 
         class GradeTooHighException : public std::exception

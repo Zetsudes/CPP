@@ -6,15 +6,18 @@
 /*   By: zamohame <zamohame@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/26 14:32:11 by zamohame          #+#    #+#             */
-/*   Updated: 2026/02/27 11:05:30 by zamohame         ###   ########.fr       */
+/*   Updated: 2026/03/24 18:30:08 by zamohame         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "Bureaucrat.hpp"
 # include "AForm.hpp"
+# include "RobotomyRequestForm.hpp"
+# include "ShrubberyCreationForm.hpp"
 
 int main()
 {
+	srand(time(NULL));
     std::cout << "<3<3<3 Valid bureaucrat <3<3<3" << std::endl << std::endl;
 	try
 	{
