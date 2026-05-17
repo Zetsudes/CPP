@@ -1,32 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PresidentPardonForm.hpp                            :+:      :+:    :+:   */
+/*   ScalarConverter.hpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zamohame <zamohame@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/27 10:50:02 by zamohame          #+#    #+#             */
-/*   Updated: 2026/05/17 15:59:14 by zamohame         ###   ########.fr       */
+/*   Created: 2026/05/17 18:01:57 by zamohame          #+#    #+#             */
+/*   Updated: 2026/05/17 18:44:43 by zamohame         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PRESIDENTPARDONFORM_HPP
-# define PRESIDENTPARDONFORM_HPP
+#ifndef SCALARCONVERTER_HPP
+# define SCALARCONVERTER_HPP
 
-#include "AForm.hpp"
+# include <iostream>
+# include <string>
 
-class PresidentPardonForm : public AForm
+class ScalarConverter
 {
     private:
-        std::string _target;
+        ScalarConverter();
+        ScalarConverter(const ScalarConverter & other);
+        ScalarConverter& operator=(const ScalarConverter& other);
+        ~ScalarConverter();
 
     public:
-        PresidentPardonForm(const std::string target);
-        PresidentPardonForm(const PresidentPardonForm& other);
-        PresidentPardonForm& operator=(const PresidentPardonForm& other);
-        ~PresidentPardonForm();
-
-        void execute(Bureaucrat const & executor) const;
+        static void convert(const std::string& literal);
 };
 
 #endif

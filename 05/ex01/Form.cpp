@@ -6,7 +6,7 @@
 /*   By: zamohame <zamohame@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/22 12:06:53 by zamohame          #+#    #+#             */
-/*   Updated: 2026/02/27 10:45:25 by zamohame         ###   ########.fr       */
+/*   Updated: 2026/05/17 15:33:01 by zamohame         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,4 +58,13 @@ void Form::beSigned(const Bureaucrat& b)
     if (b.getGrade() > _signGrade)
         throw GradeTooLowException();
     _signed = true;
+}
+
+std::ostream& operator<<(std::ostream &out, const Form& f)
+{
+    out << "Form: " << f.getName()
+        << " | Signed: " << (f.isSigned() ? "yes" : "no")
+        << " | Sign grade required: " << f.getSignGrade()
+        << " | Exec grade required: " << f.getExecGrade();
+    return out;
 }

@@ -6,7 +6,7 @@
 /*   By: zamohame <zamohame@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/22 12:07:05 by zamohame          #+#    #+#             */
-/*   Updated: 2026/02/26 14:45:11 by zamohame         ###   ########.fr       */
+/*   Updated: 2026/05/17 15:19:49 by zamohame         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ class Form
         const int _execGrade;
     
     public:
-        Form();
         Form(const std::string name, const int signGrade, const int execGrade);
         Form(const Form& src);
         Form &operator=(const Form& other);

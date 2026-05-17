@@ -6,7 +6,7 @@
 /*   By: zamohame <zamohame@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/18 14:53:34 by zamohame          #+#    #+#             */
-/*   Updated: 2026/02/26 14:26:12 by zamohame         ###   ########.fr       */
+/*   Updated: 2026/04/07 11:33:35 by zamohame         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ class Bureaucrat
         int _grade;
     
     public:
-        Bureaucrat();
         Bureaucrat(const std::string& name, int grade);
         Bureaucrat(const Bureaucrat& src);
         Bureaucrat &operator=(const Bureaucrat& other);
