@@ -6,21 +6,16 @@
 #    By: zamohame <zamohame@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/02/22 12:05:58 by zamohame          #+#    #+#              #
-#    Updated: 2026/05/17 18:01:46 by zamohame         ###   ########.fr        #
+#    Updated: 2026/05/26 12:46:58 by zamohame         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME        = intern  
+NAME        = scalar  
 
 CXX         = c++            
 CXXFLAGS    = -Wall -Wextra -Werror -std=c++98  
 
 SRC         = ScalarConverter.cpp \
-			  AForm.cpp \
-			  ShrubberyCreationForm.cpp \
-			  RobotomyRequestForm.cpp \
-			  PresidentPardonForm.cpp \
-			  Intern.cpp \
 			  main.cpp \
 
 
